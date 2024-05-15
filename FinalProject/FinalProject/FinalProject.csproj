@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C590BE85-D4EE-4503-92A3-E66D8DCE5923}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FinalProject</RootNamespace>
+    <AssemblyName>FinalProject</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=2.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.2.2.1.3\lib\net461\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AcceptCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcceptCV.Designer.cs">
+      <DependentUpon>AcceptCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AcceptCVs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AcceptCVs.Designer.cs">
+      <DependentUpon>AcceptCVs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateDAO.cs" />
+    <Compile Include="Chat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Chat.Designer.cs">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatEp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatEp.Designer.cs">
+      <DependentUpon>ChatEp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatEpJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatEpJob.Designer.cs">
+      <DependentUpon>ChatEpJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChatUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChatUser.Designer.cs">
+      <DependentUpon>ChatUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CVSubmissionHistory.cs" />
+    <Compile Include="FindJob1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindJob1.Designer.cs">
+      <DependentUpon>FindJob1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListChat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListChat.Designer.cs">
+      <DependentUpon>ListChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs" />
+    <Compile Include="Notice1.cs" />
+    <Compile Include="Recruitment.cs" />
+    <Compile Include="UCAcceptCVNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCAcceptCVNotice.Designer.cs">
+      <DependentUpon>UCAcceptCVNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCBoxChat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCBoxChat.Designer.cs">
+      <DependentUpon>UCBoxChat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCChangeAvatarNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChangeAvatarNotice.Designer.cs">
+      <DependentUpon>UCChangeAvatarNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCChangePasswordNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChangePasswordNotice.Designer.cs">
+      <DependentUpon>UCChangePasswordNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCChatFreeCandidateNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCChatFreeCandidateNotice.Designer.cs">
+      <DependentUpon>UCChatFreeCandidateNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCompanyAcceptCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCompanyAcceptCV.Designer.cs">
+      <DependentUpon>UCCompanyAcceptCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCCompanyDenyCV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCCompanyDenyCV.Designer.cs">
+      <DependentUpon>UCCompanyDenyCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCEmty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEmty.Designer.cs">
+      <DependentUpon>UCEmty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCLoginNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCLoginNotice.Designer.cs">
+      <DependentUpon>UCLoginNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCMessagge.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCMessagge.Designer.cs">
+      <DependentUpon>UCMessagge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRecruitment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRecruitment.Designer.cs">
+      <DependentUpon>UCRecruitment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCRefuseCVNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRefuseCVNotice.Designer.cs">
+      <DependentUpon>UCRefuseCVNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCSubmitNotice.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSubmitNotice.Designer.cs">
+      <DependentUpon>UCSubmitNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCV.Designer.cs">
+      <DependentUpon>UpdateCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobLove.cs" />
+    <Compile Include="Company.cs" />
+    <Compile Include="ConvertImage.cs" />
+    <Compile Include="CreateCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateCV.Designer.cs">
+      <DependentUpon>CreateCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateJob.Designer.cs">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditJobs.Designer.cs">
+      <DependentUpon>EditJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployerDAO.cs" />
+    <Compile Include="FindAvalabeCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindAvalabeCompany.Designer.cs">
+      <DependentUpon>FindAvalabeCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPaword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ForgotPaword.Designer.cs">
+      <DependentUpon>ForgotPaword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImageDefault.cs" />
+    <Compile Include="InformationOfCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationOfCompany.Designer.cs">
+      <DependentUpon>InformationOfCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InformationUser.Designer.cs">
+      <DependentUpon>InformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CV.cs" />
+    <Compile Include="CVDAO.cs" />
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="DescribeJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DescribeJob.Designer.cs">
+      <DependentUpon>DescribeJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employers.cs" />
+    <Compile Include="JobApplication.cs" />
+    <Compile Include="Jobs.cs" />
+    <Compile Include="JobsApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JobsApplication.Designer.cs">
+      <DependentUpon>JobsApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JobsDAO.cs" />
+    <Compile Include="ListJobsOfCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListJobsOfCompany.Designer.cs">
+      <DependentUpon>ListJobsOfCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonDAO.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ReadSQL.cs" />
+    <Compile Include="ScalableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcAddCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcAddCompany.Designer.cs">
+      <DependentUpon>UcAddCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UcChangeInforCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UcChangeInforCompany.Designer.cs">
+      <DependentUpon>UcChangeInforCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInformationCompanies.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInformationCompanies.Designer.cs">
+      <DependentUpon>UCInformationCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInformationCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UCInformationCV.Designer.cs">
+      <DependentUpon>UCInformationCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCInformationUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCInformationUser.Designer.cs">
+      <DependentUpon>UCInformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateInformationCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateInformationCompany.Designer.cs">
+      <DependentUpon>UpdateInformationCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateJob.Designer.cs">
+      <DependentUpon>UpdateJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserAccount.cs" />
+    <EmbeddedResource Include="AcceptCV.resx">
+      <DependentUpon>AcceptCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AcceptCVs.resx">
+      <DependentUpon>AcceptCVs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatEp.resx">
+      <DependentUpon>ChatEp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatEpJob.resx">
+      <DependentUpon>ChatEpJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChatUser.resx">
+      <DependentUpon>ChatUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateCV.resx">
+      <DependentUpon>CreateCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateJob.resx">
+      <DependentUpon>CreateJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditJobs.resx">
+      <DependentUpon>EditJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Chat.resx">
+      <DependentUpon>Chat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindJob1.resx">
+      <DependentUpon>FindJob1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListChat.resx">
+      <DependentUpon>ListChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCAcceptCVNotice.resx">
+      <DependentUpon>UCAcceptCVNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBoxChat.resx">
+      <DependentUpon>UCBoxChat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChangeAvatarNotice.resx">
+      <DependentUpon>UCChangeAvatarNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChangePasswordNotice.resx">
+      <DependentUpon>UCChangePasswordNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCChatFreeCandidateNotice.resx">
+      <DependentUpon>UCChatFreeCandidateNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCompanyAcceptCV.resx">
+      <DependentUpon>UCCompanyAcceptCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCCompanyDenyCV.resx">
+      <DependentUpon>UCCompanyDenyCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEmty.resx">
+      <DependentUpon>UCEmty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCLoginNotice.resx">
+      <DependentUpon>UCLoginNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCMessagge.resx">
+      <DependentUpon>UCMessagge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRecruitment.resx">
+      <DependentUpon>UCRecruitment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRefuseCVNotice.resx">
+      <DependentUpon>UCRefuseCVNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSubmitNotice.resx">
+      <DependentUpon>UCSubmitNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCV.resx">
+      <DependentUpon>UpdateCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindAvalabeCompany.resx">
+      <DependentUpon>FindAvalabeCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ForgotPaword.resx">
+      <DependentUpon>ForgotPaword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationOfCompany.resx">
+      <DependentUpon>InformationOfCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InformationUser.resx">
+      <DependentUpon>InformationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DescribeJob.resx">
+      <DependentUpon>DescribeJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JobsApplication.resx">
+      <DependentUpon>JobsApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListJobsOfCompany.resx">
+      <DependentUpon>ListJobsOfCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcAddCompany.resx">
+      <DependentUpon>UcAddCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UcChangeInforCompany.resx">
+      <DependentUpon>UcChangeInforCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInformationCompanies.resx">
+      <DependentUpon>UCInformationCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInformationCV.resx">
+      <DependentUpon>UCInformationCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCInformationUser.resx">
+      <DependentUpon>UCInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateInformationCompany.resx">
+      <DependentUpon>UpdateInformationCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateJob.resx">
+      <DependentUpon>UpdateJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
